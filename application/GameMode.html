@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="GameMode.css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+    <title>Risk Game</title>
+</head>
+
+<body>
+
+    <div class="container" id="content">
+        <div class="overlay">
+            <div id="modal" class="mode-modal">
+                <p class="title">RISK</p>
+                <p>Mode</p>
+                <div><button id="mode-simulation" onClick="setMode(ModeEnum.simulation)">Simulation</button></div>
+                <div><button id="mode-playing" onClick="setMode(ModeEnum.playing)">Playing</button></div>
+            </div>
+            <div id="modal" class="map-modal">
+                <p class="title">RISK</p>
+                <p>Map</p>
+                <div><button id="mode-eg" onClick="setMap(MapEnum.Egypt)">Egypt</button></div>
+                <div><button id="mode-usa" onClick="setMap(MapEnum.USA)">USA</button></div>
+            </div>
+            <div id="modal" class="player-modal">
+                <p class="title">RISK</p>
+                <p id="player-no">Player 1</p>
+                <div><button id="passive-agent" onClick="setPlayers(AgentEnum.passive)"> Passive Agent</button></div>
+                <div><button id="aggressive-agent" onClick="setPlayers(AgentEnum.aggressive)">Aggressive Agent</button>
+                </div>
+                <div><button id="pacifist-agent" onClick="setPlayers(AgentEnum.pacifist)">Pacifist Agent</button></div>
+                <div><button id="greedy-agent" onClick="setPlayers(AgentEnum.greedy)">Greedy Agent</button></div>
+                <div><button id="astar-agent" onClick="setPlayers(AgentEnum.astar)">A Star Agent</button></div>
+                <div><button id="rtastar-agent" onClick="setPlayers(AgentEnum.rtastar)">Real-time A star Agent</button>
+                </div>
+                <div><button id="pacifist-agent" onClick="setPlayers(AgentEnum.minimax)">Minimax Agent</button></div>
+            </div>
+
+            <div id="modal" class="start-modal">
+                <p class="title">RISK</p>
+                <div><button id="submit" onclick="changeToMap(event)">Start</button></div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="EnumTypes.js"></script>
+    <script type="text/javascript" src="GameMode.js"></script>
+</body>
+
+</html>
